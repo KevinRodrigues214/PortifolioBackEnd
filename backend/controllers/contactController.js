@@ -1,10 +1,10 @@
 // contactController.js
-const Contact = require('../models/Contact'); // Certifique-se de importar o modelo correto
+const Contact = require('../models/Contact'); 
 
-// Função para buscar contato pelo ID
+
 const getContactById = async (req, res) => {
   try {
-    const contact = await Contact.findById(req.params.id); // Busca pelo ID
+    const contact = await Contact.findById(req.params.id); 
     if (!contact) {
       return res.status(404).json({ message: "Contact not found" });
     }
